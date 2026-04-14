@@ -34,7 +34,7 @@ import com.thealgorithms.devutils.searches.SearchAlgorithm;
  *
  * <p>
  * <b>Space Complexity:</b> O(1) - only uses a constant amount of extra space
- * 
+ *
  * <p>
  * <b>Edge Cases:</b>
  * <ul>
