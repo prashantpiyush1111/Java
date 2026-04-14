@@ -27,6 +27,17 @@ import com.thealgorithms.devutils.searches.SearchAlgorithm;
  * Result: Index = 4
  *
  * <p>
+ * <b>Example (Simple):</b><br>
+ * Input: arr = [2, 4, 6, 8, 10], key = 8<br>
+ * Output: 3
+ *
+ * <p>
+ * <b>Explanation (Easy):</b><br>
+ * Instead of checking every element one by one, Jump Search skips elements
+ * by jumping ahead fixed steps (√n). Once it finds a range where the element
+ * might exist, it performs a linear search in that smaller block.
+ *
+ * <p>
  * <b>Time Complexity:</b><br>
  * - Best-case: O(1) - element found at first position<br>
  * - Average: O(√n) - optimal block size reduces jumps<br>
