@@ -48,7 +48,7 @@ public class StackUsingLinkedList {
     }
 
     /**
-     * Return the top element without removing it
+     * Return the top element without removing
      *
      * @return top element
      */
