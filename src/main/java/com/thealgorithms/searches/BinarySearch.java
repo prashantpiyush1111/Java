@@ -23,6 +23,15 @@ import com.thealgorithms.devutils.searches.SearchAlgorithm;
  * complexity: O(log n) - Element not found or at extreme end - Space complexity: O(1) - Only uses
  * a constant amount of extra space
  *
+ * <p><strong>Edge Cases:</strong>
+ * <ul>
+ *   <li>Empty array: Returns -1</li>
+ *   <li>Null array: Returns -1</li>
+ *   <li>Null key: Returns -1</li>
+ *   <li>Element not found: Returns -1</li>
+ *   <li>Duplicate elements: May return any one valid index of the target</li>
+ * </ul>
+ *
  * <p>Example Walkthrough: Array: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] Target: 7
  *
  * <p>Step 1: left=0, right=9, mid=4, array[4]=9 (9 &gt; 7, search left half) Step 2: left=0,
