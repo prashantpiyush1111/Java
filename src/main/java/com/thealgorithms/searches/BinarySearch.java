@@ -22,6 +22,15 @@ import com.thealgorithms.devutils.searches.SearchAlgorithm;
  * try - Average-case time complexity: O(log n) - Most common scenario - Worst-case time
  * complexity: O(log n) - Element not found or at extreme end - Space complexity: O(1) - Only uses
  * a constant amount of extra space
+ * 
+ * <p><strong>Edge Cases:</strong>
+ * <ul>
+ *   <li>Empty array: Returns -1</li>
+ *   <li>Null array: Returns -1</li>
+ *   <li>Null key: Returns -1</li>
+ *   <li>Element not found: Returns -1</li>
+ *   <li>Duplicate elements: May return any one valid index of the target</li>
+ * </ul>
  *
  * <p>Example Walkthrough: Array: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19] Target: 7
  *
