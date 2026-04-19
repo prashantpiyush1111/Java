@@ -1,26 +1,31 @@
 package com.thealgorithms.datastructures.queues;
 
-public class ThreadSafeQueueTest {
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
-	public static void main(String[] args) {
+class ThreadSafeQueueTest {
 
+	@Test
+	void testQueueOperations() {
 		ThreadSafeQueue<Integer> queue = new ThreadSafeQueue<>();
 
-		Thread producer = new Thread(() -> {
-			for (int i = 1; i <= 5; i++) {
-				queue.enqueue(i);
-				System.out.println("Enqueued: " + i);
-			}
-		});
+		assertTrue(queue.isEmpty());
 
-		Thread consumer = new Thread(() -> {
-			for (int i = 1; i <= 5; i++) {
-				Integer val = queue.dequeue();
-				System.out.println("Dequeued: " + val);
-			}
-		});
+		queue.enqueue(1);
+		queue.enqueue(2);
 
-		producer.start();
-		consumer.start();
+		assertFalse(queue.isEmpty());
+
+		assertEquals(1, queue.dequeue());
+		assertEquals(2, queue.dequeue());
+
+		assertTrue(queue.isEmpty());
+	}
+
+	@Test
+	void testDequeueEmpty() {
+		ThreadSafeQueue<Integer> queue = new ThreadSafeQueue<>();
+
+		assertNull(queue.dequeue());
 	}
 }
