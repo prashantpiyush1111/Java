@@ -1,35 +1,35 @@
 package com.thealgorithms.datastructures.queues;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
 class ThreadSafeQueueTest {
 
-	@Test
-	void testQueueOperations() {
-		ThreadSafeQueue<Integer> queue = new ThreadSafeQueue<>();
+    @Test
+    void testQueueOperations() {
+        ThreadSafeQueue<Integer> queue = new ThreadSafeQueue<>();
 
-		assertTrue(queue.isEmpty());
+        assertTrue(queue.isEmpty());
 
-		queue.enqueue(1);
-		queue.enqueue(2);
+        queue.enqueue(1);
+        queue.enqueue(2);
 
-		assertFalse(queue.isEmpty());
+        assertFalse(queue.isEmpty());
 
-		assertEquals(1, queue.dequeue());
-		assertEquals(2, queue.dequeue());
+        assertEquals(1, queue.dequeue());
+        assertEquals(2, queue.dequeue());
 
-		assertTrue(queue.isEmpty());
-	}
+        assertTrue(queue.isEmpty());
+    }
 
-	@Test
-	void testDequeueEmpty() {
-		ThreadSafeQueue<Integer> queue = new ThreadSafeQueue<>();
+    @Test
+    void testDequeueEmpty() {
+        ThreadSafeQueue<Integer> queue = new ThreadSafeQueue<>();
 
-		assertNull(queue.dequeue());
-	}
+        assertNull(queue.dequeue());
+    }
 }
